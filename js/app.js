@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var input = $('#addtolist').val();
 		if (input.length > 0) {
 			$('#error').hide();
-			$('.todolist').append('<li>' +'<button class="item"> X </button>' + " " + input + '</li>');
+			$('.todolist').append('<li>' +'<button class="item"> ✔ </button>' + " " + input + " " + '<button class="remove"> X </button>' + '</li>');
 			$('#addtolist').val('');
 		}
 		else {
@@ -11,7 +11,11 @@ $(document).ready(function(){
 		}
 	})
 
-	$('ul').on('click', 'button', function() {
+	$('ul').on('click', '.item', function() {
 		$(this).parent().toggleClass('done');	
+	});
+
+	$('ul').on('click', '.remove', function() {
+		$(this).parent().remove();	
 	});
 });

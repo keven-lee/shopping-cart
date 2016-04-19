@@ -1,0 +1,18 @@
+body {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+#error {
+	padding: 6px 0px;
+	color: red;
+	display: none;
+}
+
+.done {
+	text-decoration: line-through;
+	color: #999;
+}
